@@ -15,6 +15,7 @@ struct SnakePoint {
 };
 
 #define NORMALIZED(s, p) (s->con[p % s->len])
+#define UNNORMALIZED(s, p) (s->con[p])
 
 double strechingEnergySnake(struct Snake *snake)
 {
@@ -66,5 +67,13 @@ double energySnake(struct Snake *snake)
 void greedySnake(struct Snake *snake)
 {
   for (snake->cur = 0; snake->cur <= snake->len; snake->cur++) {
+    struct SnakePoint p = NORMALIZED(snake, snake->cur);
+    double e = energySnake(snake);
+    int i;
+    for (i = p.x - 1; i < p.x + 1; i++) {
+      int j;
+      for (j = p.y - 1; j < p.y + 1; j++) {
+      }
+    }
   }
 }
