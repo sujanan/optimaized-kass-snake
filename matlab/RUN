@@ -1,0 +1,1 @@
+matlab -nosplash -nodesktop -r "run('/home/bhathiya/research/meta/snake2/matlab/snake.m');"
